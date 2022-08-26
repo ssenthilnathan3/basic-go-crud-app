@@ -78,8 +78,8 @@ func updateStudent(w http.ResponseWriter, r *http.Request) {
 func main() {
 	r := mux.NewRouter()
 
-	students = append(students, Student{ID: "43", name: "Senthilnathan", email: "ssenthil1490@gmail.com", Department: &Department{name: "AI&DS", year: "Second"}})
-	students = append(students, Student{ID: "27", name: "Kiruthickraj", email: "kiruthickraj28@gmail.com", Department: &Department{name: "AI&DS", year: "Second"}})
+	students = append(students, Student{ID: "43", name: "Senthilnathan", email: "", Department: &Department{name: "AI&DS", year: "Second"}})
+	students = append(students, Student{ID: "27", name: "", email: "", Department: &Department{name: "AI&DS", year: "Second"}})
 
 	r.HandleFunc("/students", getStudentsList).Methods("GET")
 
